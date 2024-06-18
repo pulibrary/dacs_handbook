@@ -4,7 +4,7 @@ title: Runner role
 ---
 # Runner role
 
-The runner role switches off between team members each week.  The runner should be somebody who is planning to be in for the whole week.
+The runner role switches off between team members each week.  The runner should be somebody who is planning to be in for the whole week. 
 
 ## Initial setup
 

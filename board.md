@@ -20,6 +20,7 @@ Here are descriptions of some of the columns on the board:
 | Review/QA | Issues typically attached to a pull requests that need review or other input from DACS team members before they can be closed |
 
 
+
 ## Story points
 
 When using Epic tickets do not actually assign points to the ticket itself, Epics are the sum of the points of their assigned individual tickets. 
@@ -32,3 +33,13 @@ When using Epic tickets do not actually assign points to the ticket itself, Epic
 |5 points|2-3 days|
 |8 points|1 week|
 |13 points|Needs to be broken down into smaller tickets|
+
+## The Board Manager Role
+Every sprint a different team member rotates to the role of "board manager". This individual shares the board with the team during stand-ups and planning meetings and leads us through a discussion of the board. The board manager role should be assumed by a Team member who plans to be in the office for entire sprint. The board manager also executes a deployment of all our applications to staging and production during the course of their week as the board manager.
+
+### Deployments as the Board Manager
+
+The runner executes a production and staging deploy of each of our DACS applications. 
+
+1. Go to [Ansible Tower](https://ansible-tower.princeton.edu/).
+2. Execute a [Deployment with Capistrano](https://ansible-tower.princeton.edu/#/templates/job_template/13/details) for each [DACS application](https://docs.google.com/spreadsheets/d/1fJZ6CE4yq4EyaoeOE__bjEYPUv5xlZVM0bPKfyVAUQw/edit#gid=0) for those applications that have a staging and production environment.  
