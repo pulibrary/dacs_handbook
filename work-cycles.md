@@ -4,16 +4,7 @@ title: Work Cycles
 ---
 # Team Work Cycles
 
-We currently alternate between two types of work cycles
+DACS currently operates on two week work cycles beginning on a Monday and ending on the Friday of the Second week. Each work cycle is structured around a particular theme. Generally work cycles are devoted to issues attached to projects supporting a single application (i.e. Orangelight), but in certain instances can involve issues from many projects (i.e. a sprint focused on issues tagged as relevant to security or maintanence).
 
-## Feature Work Cycles
-
-Duration: One Week
-
-These include prioritized feature and substantive bug fix work on existing projects. Also used for kicking off "new" projects. Active tickets for these weeks come from the "Ready" or "In Progress" columns on the board. 
-
-## Maintenance Work Cycles 
-
-Duration: One Week 
-
-Covers prioritized work tagged with the "maintainence" badge on our zenhub board. These cycles include coverage of dependabot alerts, other priority security patches, and major/minor version upgrade work. We typically will conduct re-indexes of Orangelight during designated maintainence weeks. 
+## Quarterly Planning of Work Cycles
+Every quarter the DACS team meets and agrees on an outline and order of sprint themes for the upcoming quarter. This schedule can be adjusted or re-ordered as business needs shift during the course of the quarter. Upcoming sprints and the longer term list of projects they are pulled from can be found in the [DACS Airtable Board](https://airtable.com/appUKFuI9pTitjLfW/tbltAtvtqiUAGq5J1/viwYXLhBlChJEdIar?blocks=hide). 
