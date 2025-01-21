@@ -10,45 +10,30 @@ assignees: ''
 ### Ruby applications
 #### Allsearch API
 - [ ] [Staging](https://allsearch-api-staging.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 - [ ] [Production](https://allsearch-api.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 #### Approvals
 - [ ] [Staging](https://approvals-staging.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 - [ ] [Production](https://approvals.princeton.edu/)
   - [ ] Playbook
   - [ ] Deploy
 #### Bibdata
 - [ ] [Staging](https://bibdata-staging.lib.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 - [ ] [QA](https://bibdata-qa.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 - [ ] [Production](https://bibdata.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 #### DSS
 - [ ] [Staging](https://dss-staging.princeton.edu/catalog)
-  - [ ] Playbook
   - [ ] Deploy
 - [ ] [Production](https://dss.princeton.edu/catalog)
   - [ ] Playbook
   - [ ] Deploy
-#### GEAC
-- [ ] [Staging](https://geaccirc-staging.princeton.edu/)
-  - [ ] Playbook
-  - [ ] Deploy
-- [ ] [Production](https://geaccirc.princeton.edu/)
-  - [ ] Playbook
-  - [ ] Deploy
 #### Lib Jobs
 - [ ] [Staging](https://lib-jobs-staging.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 - [ ] [Production](https://lib-jobs.princeton.edu/)
   - [ ] Playbook
@@ -61,20 +46,16 @@ Shares a server with lib-jobs, no separate playbook
   - [ ] Deploy
 #### Lockers
 - [ ] [Staging](https://lockers-and-study-spaces-staging.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 - [ ] [Production](https://lockers-and-study-spaces.princeton.edu/)
   - [ ] Playbook
   - [ ] Deploy
 #### Orangelight
 - [ ] [Staging](https://catalog-staging.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 - [ ] [QA](https://catalog-qa.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 - [ ] [Production](https://catalog.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 #### RePec
 - [ ] [Staging](https://repec-staging.princeton.edu/)
@@ -87,10 +68,8 @@ Shares a server with lib-jobs, no separate playbook
 ### Vue applications
 #### Allsearch Frontend
 - [ ] [Staging](https://allsearch-staging.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 - [ ] [Production](https://allsearch.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 #### Static Tables
 - [ ] [Staging](https://static-tables-staging.princeton.edu/)
@@ -120,7 +99,6 @@ Shares a server with lib-jobs, no separate playbook
 #### Princeton and Slavery
 Note: Private repository, cannot use Tower to deploy, must deploy from local environment
 - [ ] [Staging](https://slavery-staging.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 - [ ] [Production](https://slavery.princeton.edu/)
   - [ ] Playbook
