@@ -73,7 +73,6 @@ Shares a server with lib-jobs, no separate playbook
   - [ ] Deploy
 #### Static Tables
 - [ ] [Staging](https://static-tables-staging.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 - [ ] [Production](https://static-tables-prod.princeton.edu/)
   - [ ] Playbook
