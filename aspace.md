@@ -59,8 +59,19 @@ supervisord -c supervisord/archivesspace.conf
 ```
 
 * The staff interface will be at http://localhost:3000/ (username is admin, password is admin)
+* The PUI will be at http://localhost:3001/
 * The API will be at http://localhost:4567/
 * You can access the database with `mysql --host=127.0.0.1 --port=3306  -u root -p123456 archivesspace`
+
+### Using Supervisord
+#### run all of the services
+`supervisord -c supervisord/archivesspace.conf`
+
+#### run in api mode (backend + indexer only)
+`supervisord -c supervisord/api.conf`
+
+#### run just the backend (useful for trying out endpoints that don't require Solr)
+`supervisord -c supervisord/backend.conf`
 
 ### Installing a plugin in your local development
 
