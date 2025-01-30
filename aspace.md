@@ -47,7 +47,7 @@ ArchivesSpace is our Archival Content Management System. It contains our archiva
 ```
 git clone git@github.com:archivesspace/archivesspace.git
 cd archivesspace
-docker-compose -f docker-compose-dev.yml up
+docker compose -f docker-compose-dev.yml up
 cd ./common/lib && wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.23/mysql-connector-java-8.0.23.jar && cd -
 echo "java openjdk-19.0.2" > .tool-versions
 asdf plugin add java
