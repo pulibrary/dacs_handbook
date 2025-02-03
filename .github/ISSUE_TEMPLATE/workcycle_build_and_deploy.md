@@ -111,6 +111,10 @@ Note: Private repository, cannot use Tower to deploy, must deploy from local env
   - [ ] Playbook
   - [ ] Deploy
 
+#### Next Work Cycle
+
+- [ ] Create ticket using the Work Cycle Deployment tempate slotted for the next work cycle. 
+
 #### Notes
 [Documentation on how to run all the staging playbooks at once using different tags.](https://github.com/pulibrary/dacs_handbook/blob/main/maintenance.md)
 
