@@ -17,7 +17,6 @@ assignees: ''
 - [ ] [Staging](https://approvals-staging.princeton.edu/)
   - [ ] Deploy
 - [ ] [Production](https://approvals.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 #### Bibdata
 - [ ] [Staging](https://bibdata-staging.lib.princeton.edu/)
@@ -30,13 +29,11 @@ assignees: ''
 - [ ] [Staging](https://dss-staging.princeton.edu/catalog)
   - [ ] Deploy
 - [ ] [Production](https://dss.princeton.edu/catalog)
-  - [ ] Playbook
   - [ ] Deploy
 #### Lib Jobs
 - [ ] [Staging](https://lib-jobs-staging.princeton.edu/)
   - [ ] Deploy
 - [ ] [Production](https://lib-jobs.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 ##### Aspace Helpers
 Shares a server with lib-jobs, no separate playbook
@@ -48,7 +45,6 @@ Shares a server with lib-jobs, no separate playbook
 - [ ] [Staging](https://lockers-and-study-spaces-staging.princeton.edu/)
   - [ ] Deploy
 - [ ] [Production](https://lockers-and-study-spaces.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 #### Orangelight
 - [ ] [Staging](https://catalog-staging.princeton.edu/)
@@ -59,10 +55,8 @@ Shares a server with lib-jobs, no separate playbook
   - [ ] Deploy
 #### RePec
 - [ ] [Staging](https://repec-staging.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 - [ ] [Production](https://repec-prod.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 
 ### Vue applications
@@ -75,7 +69,6 @@ Shares a server with lib-jobs, no separate playbook
 - [ ] [Staging](https://static-tables-staging.princeton.edu/)
   - [ ] Deploy
 - [ ] [Production](https://static-tables-prod.princeton.edu/)
-  - [ ] Playbook
   - [ ] Deploy
 
 ### Drupal PHP applications
