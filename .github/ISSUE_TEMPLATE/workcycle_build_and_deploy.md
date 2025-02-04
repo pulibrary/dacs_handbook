@@ -79,13 +79,6 @@ Shares a server with lib-jobs, no separate playbook
 - [ ] [Production](https://byzantine.lib.princeton.edu/)
   - [ ] Playbook
   - [ ] Deploy
-#### ReCAP
-- [ ] [Staging](https://recap-staging.princeton.edu/)
-  - [ ] Playbook
-  - [ ] Deploy
-- [ ] [Production](https://recap.princeton.edu/)
-  - [ ] Playbook
-  - [ ] Deploy
 
 ### Other (non-Drupal) PHP applications
 #### Princeton and Slavery
