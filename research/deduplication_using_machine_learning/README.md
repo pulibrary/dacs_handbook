@@ -86,6 +86,11 @@ Possible next steps would be:
 1. Train the dedupe algorithm with a portion of the human-generated sets and compare its performance with the rest of that human-generated set
 1. Compare the performance of both the humans and the dedupe machine learning algorithm with the more manual GoldRush algorithm
 
+## Prior art
+- California Digital Library
+  - [Github repository](https://github.com/cdlib/marc-ai)
+  - [Hugging Face model](https://huggingface.co/cdlib/marc-match-ai)
+
 ## References
 - Simhash - https://matpalm.com/resemblance/simhash/
 - "Similarity Estimation Techniques from Rounding Algorithms" - https://www.cs.princeton.edu/courses/archive/spring04/cos598B/bib/CharikarEstim.pdf 
