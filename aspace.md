@@ -61,7 +61,11 @@ supervisord -c supervisord/archivesspace.conf
 * The staff interface will be at http://localhost:3000/ (username is admin, password is admin)
 * The PUI will be at http://localhost:3001/
 * The API will be at http://localhost:4567/
+
+### Using a local database
+
 * You can access the database with `mysql --host=127.0.0.1 --port=3306  -u root -p123456 archivesspace`
+* You can run outstanding database migrations (including any that are included in locally installed plugins) with `./build/run db:migrate`.  This is the development equivalent of running `scripts/setup-database.sh` on a packaged archivesspace system.
 
 ### Using Supervisord
 #### run all of the services
