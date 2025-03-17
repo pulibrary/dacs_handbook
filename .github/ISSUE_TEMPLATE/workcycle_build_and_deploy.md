@@ -1,6 +1,6 @@
 ---
 name: deployments
-about: Run playbooks and deployments and for all applications
+about: Run playbooks and deployments for all applications
 title: 'Run deployments for the week starting on [INSERT DATE HERE]'
 labels: ['deployments', 'playbooks']
 assignees: ''
@@ -9,93 +9,80 @@ assignees: ''
 ## List of applications
 ### Ruby applications
 #### Allsearch API
-- [ ] [Staging](https://allsearch-api-staging.princeton.edu/)
-  - [ ] Deploy
-- [ ] [Production](https://allsearch-api.princeton.edu/)
-  - [ ] Deploy
+- Deploy
+  - [ ] [Staging](https://allsearch-api-staging.princeton.edu/)
+  - [ ] [Production](https://allsearch-api.princeton.edu/)
 #### Approvals
-- [ ] [Staging](https://approvals-staging.princeton.edu/)
-  - [ ] Deploy
-- [ ] [Production](https://approvals.princeton.edu/)
-  - [ ] Deploy
+- Deploy
+  - [ ] [Staging](https://approvals-staging.princeton.edu/)
+  - [ ] [Production](https://approvals.princeton.edu/)
 #### Bibdata
-- [ ] [Staging](https://bibdata-staging.lib.princeton.edu/)
-  - [ ] Deploy
-- [ ] [QA](https://bibdata-qa.princeton.edu/)
-  - [ ] Deploy
-- [ ] [Production](https://bibdata.princeton.edu/)
-  - [ ] Deploy
+- Deploy
+  - [ ] [Staging](https://bibdata-staging.lib.princeton.edu/)
+  - [ ] [QA](https://bibdata-qa.princeton.edu/)
+  - [ ] [Production](https://bibdata.princeton.edu/)
 #### DSS
-- [ ] [Staging](https://dss-staging.princeton.edu/catalog)
-  - [ ] Deploy
-- [ ] [Production](https://dss.princeton.edu/catalog)
-  - [ ] Deploy
+- Deploy
+  - [ ] [Staging](https://dss-staging.princeton.edu/catalog)
+  - [ ] [Production](https://dss.princeton.edu/catalog)
 #### Lib Jobs
-- [ ] [Staging](https://lib-jobs-staging.princeton.edu/)
-  - [ ] Deploy
-- [ ] [Production](https://lib-jobs.princeton.edu/)
-  - [ ] Deploy
+- Deploy
+  - [ ] [Staging](https://lib-jobs-staging.princeton.edu/)
+  - [ ] [Production](https://lib-jobs.princeton.edu/)
 ##### Aspace Helpers
 Shares a server with lib-jobs, no separate playbook
-- [ ] Staging (no front end)
-  - [ ] Deploy
-- [ ] Production (no front end)
-  - [ ] Deploy
+- Deploy
+  - [ ] Staging (no front end)
+  - [ ] Production (no front end)
 #### Lockers
-- [ ] [Staging](https://lockers-and-study-spaces-staging.princeton.edu/)
-  - [ ] Deploy
-- [ ] [Production](https://lockers-and-study-spaces.princeton.edu/)
-  - [ ] Deploy
+- Deploy
+  - [ ] [Staging](https://lockers-and-study-spaces-staging.princeton.edu/)
+  - [ ] [Production](https://lockers-and-study-spaces.princeton.edu/)
 #### Orangelight
-- [ ] [Staging](https://catalog-staging.princeton.edu/)
-  - [ ] Deploy
-- [ ] [QA](https://catalog-qa.princeton.edu/)
-  - [ ] Deploy
-- [ ] [Production](https://catalog.princeton.edu/)
-  - [ ] Deploy
+- Deploy
+  - [ ] [Staging](https://catalog-staging.princeton.edu/)
+  - [ ] [QA](https://catalog-qa.princeton.edu/)
+  - [ ] [Production](https://catalog.princeton.edu/)
 #### RePec
-- [ ] [Staging](https://repec-staging.princeton.edu/)
-  - [ ] Deploy
-- [ ] [Production](https://repec-prod.princeton.edu/)
-  - [ ] Deploy
-
+- Deploy
+  - [ ] [Staging](https://repec-staging.princeton.edu/)
+  - [ ] [Production](https://repec-prod.princeton.edu/)
 ### Vue applications
 #### Allsearch Frontend
-- [ ] [Staging](https://allsearch-staging.princeton.edu/)
-  - [ ] Deploy
-- [ ] [Production](https://allsearch.princeton.edu/)
-  - [ ] Deploy
+- Deploy
+  - [ ] [Staging](https://allsearch-staging.princeton.edu/)
+  - [ ] [Production](https://allsearch.princeton.edu/)
 #### Static Tables
-- [ ] [Staging](https://static-tables-staging.princeton.edu/)
-  - [ ] Deploy
-- [ ] [Production](https://static-tables-prod.princeton.edu/)
-  - [ ] Deploy
-
+- Deploy
+  - [ ] [Staging](https://static-tables-staging.princeton.edu/)
+  - [ ] [Production](https://static-tables-prod.princeton.edu/)
 ### Drupal PHP applications
 #### Byzantine Translations
-- [ ] [Staging](https://byzantine-staging.lib.princeton.edu/)
-  - [ ] Playbook
-  - [ ] Deploy
-- [ ] [Production](https://byzantine.lib.princeton.edu/)
-  - [ ] Playbook
-  - [ ] Deploy
+- Deploy
+  - [ ] [Staging](https://byzantine-staging.lib.princeton.edu/)
+  - [ ] [Production](https://byzantine.lib.princeton.edu/)
+- Playbook
+  - [ ] [Production](https://byzantine.lib.princeton.edu/)
+  - [ ] [Production](https://byzantine.lib.princeton.edu/)
 
 ### Other (non-Drupal) PHP applications
 #### Princeton and Slavery
 Note: Private repository, cannot use Tower to deploy, must deploy from local environment
-- [ ] [Staging](https://slavery-staging.princeton.edu/)
-  - [ ] Deploy
-- [ ] [Production](https://slavery.princeton.edu/)
-  - [ ] Playbook
-  - [ ] Deploy
+- Deploy
+  - [ ] [Staging](https://slavery-staging.princeton.edu/)
+  - [ ] [Production](https://slavery.princeton.edu/)
+- Playbook
+  - [ ] [Production](https://slavery.princeton.edu/)
 #### Video Reserves
 Note: Private repository, cannot use Tower to deploy, must deploy from local environment
-- [ ] [Staging](https://videoreserves-staging.princeton.edu/hrc/vod/clip.php) (forwards to 'days of heaven')
-  - [ ] Playbook
-  - [ ] Deploy
-- [ ] [Production](https://videoreserves-prod.princeton.edu/hrc/vod/clip.php) (forwards to 'days of heaven')
-  - [ ] Playbook
-  - [ ] Deploy
+- Deploy
+  - [ ] [Staging](https://videoreserves-staging.princeton.edu/hrc/vod/clip.php) (forwards to 'days of heaven')
+  - [ ] [Production](https://videoreserves-prod.princeton.edu/hrc/vod/clip.php) (forwards to 'days of heaven')
+- Playbook
+  - [ ] [Staging](https://videoreserves-staging.princeton.edu/hrc/vod/clip.php) (forwards to 'days of heaven')
+  - [ ] [Production](https://videoreserves-prod.princeton.edu/hrc/vod/clip.php) (forwards to 'days of heaven')
+
+  
 
 #### Next Work Cycle
 
