@@ -44,7 +44,17 @@ ArchivesSpace is our Archival Content Management System. It contains our archiva
 
 1. ArchivesSpace now supports Docker images. Follow steps [here](https://f68ffde9.archivesspace-tech-docs.pages.dev/administration/docker/). This promises to be a straightforward path to local installation.
 
-2. Or you can do it [based on this documentation](https://archivesspace.github.io/tech-docs/development/dev.html):
+To run any of the setup scripts from inside docker:
+
+`docker exec -it archivesspace bash` # this gives you a shell on the archivesspace container and access to the distribution files
+`archivesspace@9ed453c46a9f:/$ cd archivesspace/scripts/`
+`archivesspace@9ed453c46a9f:/archivesspace/scripts$ ls` #to see what's there, returns
+```
+backup.bat  backup.sh  ead_export.bat  ead_export.sh  find-base.sh  initialize-plugin.bat  initialize-plugin.sh  password-reset.bat  password-reset.sh  rb  setup-database.bat  setup-database.sh
+```
+`archivesspace@9ed453c46a9f:/archivesspace/scripts$ ./setup-database.sh`
+
+3. Or you can do it [based on this documentation](https://archivesspace.github.io/tech-docs/development/dev.html):
 
 ```
 git clone git@github.com:archivesspace/archivesspace.git
