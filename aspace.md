@@ -42,7 +42,9 @@ ArchivesSpace is our Archival Content Management System. It contains our archiva
 
 ## Setting up local development
 
-[Based on this documentation](https://archivesspace.github.io/tech-docs/development/dev.html)
+1. ArchivesSpace now supports Docker images. Follow steps [here](https://f68ffde9.archivesspace-tech-docs.pages.dev/administration/docker/). This promises to be a straightforward path to local installation.
+
+2. Or you can do it [based on this documentation](https://archivesspace.github.io/tech-docs/development/dev.html):
 
 ```
 git clone git@github.com:archivesspace/archivesspace.git
