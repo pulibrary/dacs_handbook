@@ -52,6 +52,8 @@ To run any of the setup scripts from inside docker:
   `backup.bat  backup.sh  ead_export.bat  ead_export.sh  find-base.sh  initialize-plugin.bat  initialize-plugin.sh  password-reset.bat  password-reset.sh  rb  setup-database.bat  setup-database.sh`
 - `archivesspace@9ed453c46a9f:/archivesspace/scripts$ ./setup-database.sh`
 
+The PUI will be at localhost and the SUI will be at localhost/staff
+
 3. Or you can do it [based on this documentation](https://archivesspace.github.io/tech-docs/development/dev.html):
 
 ```
