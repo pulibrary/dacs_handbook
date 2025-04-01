@@ -24,7 +24,7 @@ assignees: ''
 #### Lib Jobs
 - Deploy
   - [ ] [Production](https://lib-jobs.princeton.edu/)
-##### Aspace Helpers
+#### Aspace Helpers
 Shares a server with lib-jobs, no separate playbook
 - Deploy
   - [ ] Production (no front end)
