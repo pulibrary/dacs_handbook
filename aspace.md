@@ -54,7 +54,7 @@ To run any of the setup scripts from inside docker:
 
 The PUI will be at localhost and the SUI will be at localhost/staff
 
-3. Or you can do it [based on this documentation](https://archivesspace.github.io/tech-docs/development/dev.html):
+2. Or you can do it [based on this documentation](https://archivesspace.github.io/tech-docs/development/dev.html):
 
 ```
 git clone git@github.com:archivesspace/archivesspace.git
