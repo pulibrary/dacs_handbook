@@ -42,7 +42,7 @@ ArchivesSpace is our Archival Content Management System. It contains our archiva
 
 ## Setting up local development
 
-1. ArchivesSpace now supports Docker images. Follow steps [here](https://f68ffde9.archivesspace-tech-docs.pages.dev/administration/docker/). This promises to be a straightforward path to local installation.
+1. Starting from v4.x, ArchivesSpace supports Docker images. Follow steps [here](https://f68ffde9.archivesspace-tech-docs.pages.dev/administration/docker/). This promises to be a straightforward path to local installation.
 
 To run any of the setup scripts from inside docker:
 
@@ -54,7 +54,7 @@ To run any of the setup scripts from inside docker:
 
 The PUI will be at localhost and the SUI will be at localhost/staff
 
-2. Or you can do it [based on this documentation](https://archivesspace.github.io/tech-docs/development/dev.html):
+2. For 3.5.1 (our current production version) or any other version prior to v4.x, you can install ArchivesSpace [based on this documentation](https://archivesspace.github.io/tech-docs/development/dev.html):
 
 ```
 git clone git@github.com:archivesspace/archivesspace.git
@@ -69,6 +69,14 @@ gzip -dc ./build/mysql_db_fixtures/accessibility.sql.gz | mysql --host=127.0.0.1
 brew install supervisord
 supervisord -c supervisord/archivesspace.conf
 ```
+
+CAUTION: 3.5.1 is on Ruby 2.5 and uses jruby. Be sure to set your `.tool-versions` to
+```
+ruby jruby-9.2.20.1
+```
+and `asdf install`.
+
+Also note that `java openjdk-17.0.2` breaks 3.5.1, so be sure to be on `java openjdk-19.0.2`.
 
 * The staff interface will be at http://localhost:3000/ (username is admin, password is admin)
 * The PUI will be at http://localhost:3001/
