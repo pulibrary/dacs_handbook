@@ -70,6 +70,11 @@ brew install supervisord
 supervisord -c supervisord/archivesspace.conf
 ```
 
+If you use any docker file other than `docker-compose-dev.yml`, take note:
+
+- you need to run `docker compose -f [filename] build` followed by `docker compose -f [filename] up`
+- the application needs a lot of cpu and will be SLOW (this is from the perspective of 2.4 GHz 8-Core Intel Core i9 / 32 GB)
+
 CAUTION: 3.5.1 is on Ruby 2.5 and uses jruby. Be sure to set your `.tool-versions` to
 ```
 ruby jruby-9.2.20.1
