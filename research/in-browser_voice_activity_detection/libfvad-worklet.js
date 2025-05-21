@@ -6,7 +6,7 @@ const FRAME_SIZE = 128;
 //   1. collecting frames into buffers
 //   2. sending those buffers to libfvad to determine whether or not it contains speech
 //   3. broadcasting buffers with speech via a MessagePort
-class AudioProc extends AudioWorkletProcessor {
+class LibFVADProcessor extends AudioWorkletProcessor {
     #vad = undefined;
     #bufferSize = undefined;
     #floatTo16BitPCM = undefined;
@@ -50,4 +50,4 @@ class AudioProc extends AudioWorkletProcessor {
         }
     }
 }
-registerProcessor("libfvad-processor", AudioProc);
+registerProcessor("libfvad-processor", LibFVADProcessor);
