@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VAD Tester</title>
+        <script type="module" src="./vad-tester.js"></script>
+    </head>
+    <body>
+        <h1>VAD Tester</h1>
+        <h2>Controls</h2>
+        <form id="controls">
+            <fieldset>
+                <legend>Select a Voice Activity Detector:</legend>
+                <input type="radio" id="libfvad" name="vad" value="libfvad">
+                <label for="libfvad">libfvad (aka WebRTC)</label>
+                <br>
+                <input type="radio" id="silero" name="vad" value="silero">
+                <label for="libfvad">Silero</label>
+                <br>
+                <input type="radio" id="none" name="vad" value="none" checked>
+                <label for="none">No VAD</label>
+            </fieldset>
+            <button id="start" type="button">Start recording</button>
+            <button id="stop" type="button">Stop recording</button>
+        </form>
+    </body>
+</html>
