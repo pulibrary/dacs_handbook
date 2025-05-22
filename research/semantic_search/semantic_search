@@ -15,9 +15,12 @@
 
 
 ## References
-  1. [Text embeddings using BERT](https://medium.com/@davidlfliang/intro-getting-started-with-text-embeddings-using-bert-9f8c3b98dee6)
-  2. [Dense vector search](https://solr.apache.org/guide/solr/latest/query-guide/dense-vector-search.html)
-  3. [Solr.pl](https://solr.pl/en/2024/11/18/apache-solr-embeddings-how-to-start/)
+1. [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://aclanthology.org/N19-1423/) (Devlin et al., NAACL 2019)
+2. Code: [google search/bert](https://github.com/google-research/bert)
+3. [Text embeddings using BERT](https://medium.com/@davidlfliang/intro-getting-started-with-text-embeddings-using-bert-9f8c3b98dee6)
+4. [Dense vector search](https://solr.apache.org/guide/solr/latest/query-guide/dense-vector-search.html)
+5. [Solr.pl](https://solr.pl/en/2024/11/18/apache-solr-embeddings-how-to-start/)
+
 
 ## Appendix
 
