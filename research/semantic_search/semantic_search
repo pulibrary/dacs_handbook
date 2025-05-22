@@ -15,6 +15,9 @@
 
 
 ## References
+  1. [Text embeddings using BERT](https://medium.com/@davidlfliang/intro-getting-started-with-text-embeddings-using-bert-9f8c3b98dee6)
+  2. [Dense vector search](https://solr.apache.org/guide/solr/latest/query-guide/dense-vector-search.html)
+  3. [Solr.pl](https://solr.pl/en/2024/11/18/apache-solr-embeddings-how-to-start/)
 
 ## Appendix
 
