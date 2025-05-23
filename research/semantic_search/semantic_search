@@ -1,6 +1,8 @@
 # Semantic search
 
 ## Abstract
+
+In our Library catalog we use Solr with keyword search as our primary search engine to index approximately 22 million bibliographic records using MARC fields. In this project we explore the integration of semantic search to enhance user experience and deliver more relevant results. Semantic search allows the search engine to comprehend the meaning behind user queries and search objects, similar to humans. This approach not only improves text-based searches but also extends to various media types, including images, videos, and audio data, as long as their meanings can be represented as vectors. By implementing semantic search, we aim to create more effective and satisfying search experiences for our users.
    
 
 ## keywords: BERT, Lucene Solr, sklearn, transformers, torch, python, semantic search, marcXML
