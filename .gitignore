@@ -4,3 +4,5 @@ _site
 .jekyll-metadata
 vendor
 research/in-browser_voice_activity_detection/silero_vad_v5.onnx
+.DS_Store
+*/.DS_store

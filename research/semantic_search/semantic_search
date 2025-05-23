@@ -1,0 +1,28 @@
+# Semantic search
+
+## Abstract
+
+In our Library catalog we use Solr with keyword search as our primary search engine to index approximately 22 million bibliographic records using MARC fields. In this project we explore the integration of semantic search to enhance user experience and deliver more relevant results. Semantic search allows the search engine to comprehend the meaning behind user queries and search objects, similar to humans. This approach not only improves text-based searches but also extends to various media types, including images, videos, and audio data, as long as their meanings can be represented as vectors. By implementing semantic search, we aim to create more effective and satisfying search experiences for our users.
+   
+
+## keywords: BERT, Lucene Solr, sklearn, transformers, torch, python, semantic search, marcXML
+
+## Introduction
+
+## Methodology
+
+## Results
+
+## Conclusions and next steps
+
+
+## References
+1. [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://aclanthology.org/N19-1423/) (Devlin et al., NAACL 2019)
+2. Code: [google search/bert](https://github.com/google-research/bert)
+3. [Text embeddings using BERT](https://medium.com/@davidlfliang/intro-getting-started-with-text-embeddings-using-bert-9f8c3b98dee6)
+4. [Dense vector search](https://solr.apache.org/guide/solr/latest/query-guide/dense-vector-search.html)
+5. [Solr.pl](https://solr.pl/en/2024/11/18/apache-solr-embeddings-how-to-start/)
+
+
+## Appendix
+
