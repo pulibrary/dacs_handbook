@@ -87,6 +87,11 @@ title: Reservoir
     [localhost:8081/reservoir/upload-form/](http://localhost:8081/reservoir/upload-form/)
 
     Uploaded files need to have a .xml extension
+4. Get the marcxml record for a cluster
+    ```
+    curl -HX-Okapi-Tenant:$OKAPI_TENANT \
+    "$OKAPI_URL/reservoir/oai?verb=GetRecord&identifier=oai:003aca56-bc64-43a4-9b6b-6b31f3d41fe8"
+    ```
 
 ## Working with the Postgres container
 
