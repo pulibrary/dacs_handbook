@@ -24,6 +24,7 @@ wikibase and into bibdata. The wikibase currently defines the first- (Wikidata) 
 ### Next Steps
 
 - [ ] Develop SPARQL queries to get records out
+- [ ] Investigate transformations needed to make the data conformant for Bibdata
 - [ ] Develop an EAD2RiC CSV transformation for import
 - [ ] Develop an OpenRefine workflow for import based on the CSV export
 
