@@ -13,13 +13,13 @@ To address this, I've developed a [wiki-cloud implementation](https://recordsinc
 Records in Contexts conceptual model to explore how the record structure will change and what it would take to get collection-level records out of a 
 wikibase and into bibdata. The wikibase currently defines the first- (Wikidata) and second-level (RiC) entities and properties and some minimal sample data. Work completed to date includes:
 
-- [ ] make implementation decisions for all RiC-CM entities, attributes, and relations (datatypes, object properties etc.)
-- [ ] create Item records for all RiC-CM entities, attributes, and relations
-- [ ] add Wikidata Items to facilitate scoping and constraints
-- [ ] add subject and object type constraints to all Item records
-- [ ] identify controlled vocabularies required by certain RiC properties
-- [ ] create Item records for vocabularies and vocabulary terms
-- [ ] create Cradle forms to facilitate data entry
+- make implementation decisions for all RiC-CM entities, attributes, and relations (datatypes, object properties etc.)
+- create Item records for all RiC-CM entities, attributes, and relations
+- add Wikidata Items to facilitate scoping and constraints
+- add subject and object type constraints to all Item records
+- identify controlled vocabularies required by certain RiC properties
+- create Item records for vocabularies and vocabulary terms
+- create Cradle forms to facilitate data entry
 
 ### Next Steps
 
