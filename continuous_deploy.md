@@ -29,9 +29,9 @@ deploy_user_local_keys:
   - { name: 'allsearch-api-staging-circleci-key', key: "{{ lookup('file', '../keys/circleci/allsearch-api-staging.pub') }}" }
 ```
 
-Run the deploy_user playbook with the `update_keys` tag against the servers and environment you will be deploying to:
+Run the application's playbook with the `update_keys` tag against the servers and environment you will be deploying to:
 ```bash
-ansible-playbook playbooks/deploy_user.yml --tags update_keys -e runtime_env=staging --limit=allsearch_api_staging
+ansible-playbook playbooks/allsearch_api.yml --tags update_keys
 ```
 
 4. Add the deployment to the CircleCI config
@@ -60,3 +60,17 @@ workflows:
              only:
                - main
 ```
+
+
+## Troubleshooting nomad
+
+To troubleshoot the container in nomad that runs this:
+
+1. cd into the `nomad` directory of princeton_ansible
+1. `bin/login`
+1. Your browser will open with a list of jobs
+1. Select the circleci-runner job
+1. Find a recent allocation and click on its id
+1. Press the Exec button to open a terminal
+1. Press enter to accept the default shell
+1. Run any commands that will help you with your troubleshooting
