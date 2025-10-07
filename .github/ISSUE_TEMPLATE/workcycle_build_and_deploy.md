@@ -23,15 +23,6 @@ Note: Private repository, cannot use Tower to deploy, must deploy from local env
   - [ ] [Production](https://slavery.princeton.edu/)
 - Playbook
   - [ ] [Production](https://slavery.princeton.edu/)
-#### Video Reserves
-Note: Private repository, cannot use Tower to deploy, must deploy from local environment
-- Deploy
-  - [ ] [Staging](https://videoreserves-staging.princeton.edu/hrc/vod/clip.php) (forwards to 'days of heaven')
-  - [ ] [Production](https://videoreserves-prod.princeton.edu/hrc/vod/clip.php) (forwards to 'days of heaven')
-- Playbook
-  - [ ] [Staging](https://videoreserves-staging.princeton.edu/hrc/vod/clip.php) (forwards to 'days of heaven')
-  - [ ] [Production](https://videoreserves-prod.princeton.edu/hrc/vod/clip.php) (forwards to 'days of heaven')
-
   
 
 #### Next Work Cycle
