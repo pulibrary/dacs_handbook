@@ -54,6 +54,8 @@ To run any of the setup scripts from inside docker:
 
 The PUI will be at localhost and the SUI will be at localhost/staff
 
+The REST API will be at localhost/staff/api
+
 2. For 3.5.1 (our current production version) or any other version prior to v4.x, you can install ArchivesSpace [based on this documentation](https://archivesspace.github.io/tech-docs/development/dev.html):
 
 ```
