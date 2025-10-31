@@ -8,14 +8,7 @@ assignees: ''
 ---
 ## List of applications
 
-### Drupal PHP applications
-#### Byzantine Translations
-
-- Playbook
-  - [ ] [Production](https://byzantine.lib.princeton.edu/)
-  - [ ] [Staging](https://byzantine-staging.lib.princeton.edu/)
-
-### Other (non-Drupal) PHP applications
+### PHP applications
 #### Princeton and Slavery
 Note: Private repository, cannot use Tower to deploy, must deploy from local environment
 - Deploy
