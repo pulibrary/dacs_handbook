@@ -2,7 +2,7 @@
 
 ## How to set it up
 
-Follow intstructions [here](https://github.com/pulibrary/dacs_handbook/blob/main/reservoir.md)
+Follow instructions [here](https://github.com/pulibrary/dacs_handbook/blob/main/reservoir.md)
 
 ## What we did 
 
@@ -25,4 +25,3 @@ Follow intstructions [here](https://github.com/pulibrary/dacs_handbook/blob/main
 
 * [Reservoir repo](https://github.com/indexdata/reservoir)
 * [API Docs](https://s3.amazonaws.com/indexdata-docs/api/reservoir/reservoir.html)
-* 
