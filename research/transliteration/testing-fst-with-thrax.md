@@ -24,3 +24,9 @@ cp $(brew --prefix thrax)/share/thrax/grammars/example.grm my-thrax.grm
 1. `thraxmakedep my-thrax.grm` (ignore the SyntaxWarning)
 1. `make`
 1. `cat names.txt | thraxrewrite-tester --far=my-thrax.far --rules=TOKENIZER`
+
+
+## Other options
+
+* [pyforma looks really nice](https://github.com/mhulden/pyfoma), it allows you to view the FST you are working with as a graph
+* [a nice rust crate](https://crates.io/crates/rustfst)
