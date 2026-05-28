@@ -10,7 +10,11 @@ In our Library catalog we use Solr with keyword search as our primary search eng
 ## Introduction
 
 ## Methodology
+Text embeddings were implemented in Python utilizing the Sentence Transformers library with the pretrained model `multi-qa-mpnet-base-cos-v1`. This model was selected from the available [semantic search models](https://sbert.net/docs/sentence_transformer/pretrained_models.html#semantic-similarity-models) based on its support for 15 languages (Arabic, Chinese, Dutch, English, French, German, Italian, Korean, Polish, Portuguese, Russian, Spanish, and Turkish), compact model size, and default output dimensionality of 768 dimensions. The model was deployed locally to generate embeddings using a [nearest neigbor text embeddings](https://github.com/pulibrary/dedup-text-embeddings/pull/1/changes) for similarity computation.
 
+The Solr schema was extended with a [denseVector](https://solr.apache.org/guide/solr/latest/query-guide/dense-vector-search.html) field to enable k-nearest neighbor (kNN) index-based retrieval. A new request handler, /semantic, was configured with deftype='lucene' to facilitate semantic search queries against the dense vector index. 
+
+The catalog application was modified to support the new `/semantic` Solr handler and to accept semantic search query parameters, enabling end-to-end semantic search functionality across the system.
 ## Results
 
 ## Conclusions and next steps
