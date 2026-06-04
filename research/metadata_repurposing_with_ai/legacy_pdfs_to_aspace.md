@@ -123,9 +123,10 @@ It sent me to the brink of cognitive overload.
 I finally opted out of the infinite loop once it started making things up.
 
 Other than the hallucination, the fruit of my labors with Copilot is a CSV with the content:
-
+```
 FolderNumber,Title,Page
 ,NO INVENTORY DETECTED,
+```
 
 **Takeaway:**
 Designed to maximize user engagement rather than produce usable output. Borderline abusive. Huge waste of time.
