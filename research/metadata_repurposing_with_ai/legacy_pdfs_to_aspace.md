@@ -55,7 +55,7 @@ Blocker 2. I then immediately hit a larger roadblock when I uploaded the 4 PDF's
 So I had to process the 4 files in 3 discrete chat sessions.
 
 Blocker 3. When trying to run my first chunk (2 PDF's amounting to just under 100 pages), I now ran into the complexity limit of the free plan. 
-I decided to purchase the Pro plan for $20/month (for one month only), which comes with 5x token allowance per session. (See [usage limits](https://support.claude.com/en/articles/9797557-usage-limit-best-practices.)
+I decided to purchase the Pro plan for $20/month (for one month only), which comes with 5x token allowance per session. (See [usage limits](https://support.claude.com/en/articles/9797557-usage-limit-best-practices.))
 This allowed me to proceed and process 3 additional files in 2 chunks.
 
 Blocker 4. The 4th file contained 133 pages, more than the allowed page limit. 
