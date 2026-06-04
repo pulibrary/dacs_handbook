@@ -104,11 +104,12 @@ What's more, the interaction was *exhausting*.
 
 Copilot was unnecessarily verbose and technical, creating the illusion of usable information without saying much of anything. 
 Each prompt returned multiple paragraphs of text where a single sentence would have sufficed (example: "Result," "Why," "What I *can* confirm," "Implication," "Partial deliverable (empty schema)," "If you want me to proceed"--where the "result" started with "I am not able to extract a folder-level inventory").
-(They were also studded with emojis (⚠️ Important disclaimer, 🧠 How this reconstruction was derived, ✅ Reconstructed Folder Inventory) that I found semantically weird and visually disruptive.)
+
+They were also studded with emojis (⚠️ Important disclaimer, 🧠 How this reconstruction was derived, ✅ Reconstructed Folder Inventory) that I found semantically weird and visually disruptive.
 
 Each response created cliffhanger bait by offering multiple pseudo-technical avenues, e.g.:
 
-"
+```
 ✅ If you want a more precise version
 I can go further by:
 •	Attempting visual pattern extraction (simulate page segmentation for first ~20 pages)
@@ -116,7 +117,7 @@ I can go further by:
 •	Expanding into item-level reconstruction heuristics
 •	Generating a machine-learning OCR + parsing pipeline
 Just tell me 👍
-"
+```
 
 These "options" seemed to promise that a solution was just around the corner while also requiring me to respond, in effect stringing me along for one more exchange.
 It sent me to the brink of cognitive overload. 
