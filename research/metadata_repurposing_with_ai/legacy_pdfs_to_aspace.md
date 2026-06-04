@@ -5,7 +5,7 @@ We have unstructured legacy metadata that is not discoverable through search in 
 This makes the resources effectively undiscoverable to patrons.
 
 The data lives in documents of various formats (typed, Word, PDF), which are not uniformly structured and can run to book length.
-In the past, we have laboriously re-keyed this kind of data by hand, frequently using student workers (both ongoing during the school year and in discrete summer projects).
+In the past, we have laboriously re-keyed this kind of data by hand, frequently using student workers (both ongoing during the school year and in summer projects).
 
 The problem I tackled for this experiment was a cache of 5 legacy descriptions that our Librarian for Latin American Studies, Latino Studies, and Iberian Peninsular Studies asked me to convert to finding aids.
 All 5 documents had been imaged and were available as PDF downloads from our digital repository (figgy).
@@ -36,11 +36,11 @@ This first return emulated the input document such that box and folder numbers w
 A second prompt asking Claude to infer those from context and return them on each line succeeded beautifully.
 
 In a third prompt, I then asked Claude to also provide the data in EAD2002 format. 
-It initially returned a <dsc> grouped by box; a fourth prompt was required to restructure the <dsc> as a nested contents list.
+It initially returned a `<dsc>` grouped by box; a fourth prompt was required to restructure the `<dsc>` as a nested contents list.
 
 The EAD output held unexpected surprises, all unprompted:
 - call number, subject headings, and microfilm numbers were included and appropriately encoded; they were ostensibly not from the input PDF but our two catalog records
-- the <descrules> element was set to DACS
+- the `<descrules>` element was set to DACS
 - component id's were included and prefixed with "aspace_"
 
 I finished this task just within the token limit of the free plan--it told me I was out of exchanges right when I was done.
@@ -60,7 +60,7 @@ This allowed me to proceed and process 3 additional files in 2 chunks.
 
 Blocker 4. The 4th file contained 133 pages, more than the allowed page limit. 
 (The 100-page limit is apparently a technical limitation, not a matter of pricing tier.)
-By pure luck, the document contained exactly 100 pages of pure inventory after manually trimming the introductory matter and index.
+By pure luck, the document contained exactly 100 pages of inventory after manually trimming the introductory matter and index.
 For larger legacy files this workflow would not work without additional splitting of PDF documents (which may then require re-contextualization to put it back together).
 
 Blocker 5. This file took a while to run, so I actually walked away for a few minutes.
@@ -77,12 +77,12 @@ If that is true, then the processing cost, including the energy cost, was spent 
 
 **Limitations:** 
 In addition to the complexity throttling I already mentioned, I also observed that the output was not homogenous between sessions. 
-For example, in one session, the EAD output had numbered <c01> etc. elements, whereas in all other sessions the <c> elements were unnumbered. 
+For example, in one session, the EAD output had numbered `<c01>` etc. elements, whereas in all other sessions the `<c>` elements were unnumbered. 
 The differences were minor from file to file, but accrued with the size of the batch.
 As a result, the post-transformation Q&A was more laborious than expected.
 Overall, though, using AI for this work was significantly faster than the manual alternative, amounting to a few hours vs. days or weeks of manual data entry.
 
-NB: This experiment was purely based on chat interactions. The Pro plan comes with access to Opus, Code, and Collaboration, none of which I used. 
+NB: This experiment was purely based on chat interactions in Sonnet. The Pro plan comes with access to Opus, Code, and Collaboration, none of which I used. 
 
 **Takeaway:** 
 Realistically, we'd need a higher-performing enterprise plan to make this a sustainable batch workflow.
