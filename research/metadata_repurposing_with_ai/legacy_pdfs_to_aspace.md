@@ -5,7 +5,7 @@ We have unstructured legacy metadata that is not discoverable through search in 
 This makes the resources effectively undiscoverable to patrons.
 
 The data lives in documents of various formats (typed, Word, PDF), which are not uniformly structured and can run to book length.
-In the past, we have laboriously re-keyed this kind of data by hand, frequently using student workers (both ongoing during the school year and in summer projects).
+In the past, we have either scraped the docs or laboriously re-keyed them by hand, frequently using student workers (both ongoing during the school year and in summer projects).
 
 The problem I tackled for this experiment was a cache of 5 legacy descriptions that our Librarian for Latin American Studies, Latino Studies, and Iberian Peninsular Studies asked me to convert to finding aids.
 All 5 documents had been imaged and were available as PDF downloads from our digital repository (figgy).
