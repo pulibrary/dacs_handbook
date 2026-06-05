@@ -49,7 +49,7 @@ I finished this task just within the token limit of the free plan--it told me I 
 
 I then entered the same prompt and the 4 remaining links to the legacy inventories in figgy.
 
-Blocker 1. Here, I encountered a minor roadblock: Claude required me to upload the PDF's manually (it said it couldn't get them from figgy because figgy is not in its domain--there may be a way to address this but I didn't pursue it).
+Blocker 1. Here, I encountered a minor roadblock: Claude required me to upload the PDF's manually (it said it couldn't get them from figgy because figgy is not in its domain--it may have been respecting the robots file, which disallows everything, but I didn't pursue it).
 
 Blocker 2. I then immediately hit a larger roadblock when I uploaded the 4 PDF's: Claude couldn't process them all at once because it has a 100 page limit per chat.
 So I had to process the 4 files in 3 discrete chat sessions.
