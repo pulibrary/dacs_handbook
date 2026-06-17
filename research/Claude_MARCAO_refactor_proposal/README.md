@@ -1,4 +1,4 @@
-### Claude refactor experiment
+### Claude Refactoring Experiment
 
 For this experiment, I asked Claude to make a proposal to consider https://github.com/pulibrary/aspace_helpers/issues/755 and 
 https://github.com/pulibrary/aspace_helpers/issues/753 and propose a refactor of the marcao plugin that moves most of the code into lib_jobs.
