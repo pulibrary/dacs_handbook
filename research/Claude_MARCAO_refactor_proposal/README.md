@@ -6,7 +6,7 @@ https://github.com/pulibrary/aspace_helpers/issues/753 and propose a refactor of
 ### 1. Setup
 
 For this experiment, I used Claude Code, the agentic Claude coding tool, from VS Code. This gives Claude access to my file system,
-allowing it to manipulate my code base. This tool is not available with the free version; I used my personal Claude subscription for this.
+allowing it to manipulate my code base. This tool is not available with the free version; I used my personal Claude subscription for this. The version I used is Sonnet 4.6, which is less token-expensive than Opus.
 
 I used the most conservative settings, e.g. requiring it to ask permission before running any commands, and prompted it to prepare the
 proposal on a copy rather than making changes to existing files.
