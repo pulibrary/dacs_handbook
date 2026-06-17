@@ -6,17 +6,17 @@ https://github.com/pulibrary/aspace_helpers/issues/753 and propose a refactor of
 ### 1. Setup
 
 For this experiment, I used Claude Code, the agentic Claude coding tool, from VS Code. This gives Claude access to my file system,
-allowing it to manipulate my code base.
+allowing it to manipulate my code base. This tool is not available with the free version; I used my personal Claude subscription for this.
 
 I used the most conservative settings, e.g. requiring it to ask permission before running any commands, and prompted it to prepare the
 proposal on a copy rather than making changes to existing files.
 
-As it turns out, this meant I had to approve every `cd` and `cat` etc. (133 interactions), so I'll relax that requirement (at least a bit) next time!
+As it turns out, this meant I had to approve every `cd` and `cat` etc. (133 interactions), so I'll relax that requirement a bit next time!
 
 ### 2. Process
 
 My interaction with the tool resembled "vibe coding" where it would do a thing, I would weigh in, and it would do the thing a little differently.
-That said, I tweaked the outcome maybe two or three times; the tool worked mostly independently (except for me approving every bash command).
+That said, I tweaked the outcome maybe two or three times; the tool worked mostly autonomously (except for me approving every bash command).
 
 The times where I intervened were a few times when it said it was done and listed a few things it had considered out of scope. I prompted it
 to also address (some of) those.
