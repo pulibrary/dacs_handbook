@@ -9,7 +9,7 @@
   `.collection_to_marc` remain class-level, since they aren't per-record.
 
   - [RH]
-  - [CC]
+  - [CC]  Good direction and a better fit with Aspace2alma::Resource` / `Aspace2alma::TopContainer conventions. It will be easier to collect logic under this new class. 
   - [JS]  I think this is a good direction!  It will help us to use the class to encapsulate more of the logic, so that you don't have to consider how all the various methods interact with each other (unless you are deep in troubleshooting mode).
   - [RL]
   
@@ -20,7 +20,7 @@
   changing what gets written into the record.
 
   - [RH] that's an improvement!
-  - [CC]
+  - [CC]  It is definitely an improvement. Agree with JS to move this methods to be private and test the interaction not each method.  
   - [JS]  I agree that this is an improvement!  I would suggest making many of these methods private (to help with encapsulation as mentioned above).  I would not recommend independently testing these methods, but rather testing their behavior by making sure that #to_marc produces good data.  I am also not sure about the naming of these -- is `tags544` the most useful method name (genuine question)?
   - [RL]
   
@@ -32,7 +32,7 @@
   logic ever needs to change.
 
   - [RH] that's an improvement
-  - [CC]
+  - [CC] an improvement
   - [JS] nice
   - [RL]
   
@@ -48,7 +48,7 @@
   **behaviorally unchanged** from `MarcAOMapper`.
 
   - [RH] correct, that bit is literally a copy, so merging makes every bit of sense
-  - [CC]
+  - [CC] per your description RH I agree that it's a better approach
   - [JS] agree with RH
   - [RL]
 
@@ -64,7 +64,7 @@
   the migration or file it separately.
 
   - [RH] oh?? good catch! it shouldn't return `nil`, it should return a blank (i.e. a space).
-  - [CC]
+  - [CC] :bug: it's good that it found it. We should look into fixing it.
   - [JS] agree with RH
   - [RL]
   
@@ -77,7 +77,7 @@
   much easier to question once the code lives somewhere with test coverage.
 
   - [RH] no, that one is intentional
-  - [CC]
+  - [CC] Agree with JS. It's a good example for Claude's training.
   - [JS] This terminology (main entry vs added entry) seems like a good thing to educate Claude about (in a repo-specific file or in your global CLAUDE.md?)
   - [RL]
   
@@ -87,7 +87,7 @@
   rest of the mapper -- worth a second look.
 
   - [RH] also intentional
-  - [CC]
+  - [CC] thanks for documenting it RH
   - [JS]
   - [RL]
 
@@ -114,7 +114,7 @@ a. **"Which resources are flagged for AO-level export?"** The plugin asks
    So the job fetches full resource records and filters client-side.
 
   - [RH] Nice! I had a notion that was there, but finding it would potentially have cost me a lot of time/sweat&tears.
-  - [CC]
+  - [CC] nice
   - [JS] cool
   - [RL]
    
@@ -129,7 +129,7 @@ b. **"Which AOs under a flagged resource changed since the last run?"** The
    `type: ['archival_object']`.
 
   - [RH] ...and we should do this for any record type, not only the ao's
-  - [CC]
+  - [CC] ok
   - [JS]
   - [RL]
 
@@ -175,14 +175,14 @@ d. maps everything in one pass with `ArchivalObjectRecord.collection_to_marc`
    can't collide on the SFTP side);
 
   - [RH] I like "defensive rename-before-overwrite dance"! I came up with the dance, and now it has a name! :-)
-  - [CC]
+  - [CC] fun!
   - [JS] 💃
   - [RL]
    
 e. records a one-line report via `LibJob`/`DataSet`, replacing `report.json`.
 
   - [RH]
-  - [CC]
+  - [CC] JS, Thanks for providing the location in lib-jobs
   - [JS] It would be nice to also register the job status (Success or Failure) so that it shows up in https://lib-jobs.princeton.edu/status and we get an alert if it fails.  You can do this with `RecentJobStatus.register(job: 'SendComponentMarcxmlToAlmaJob', status: Success())` or `RecentJobStatus.register(job: 'SendComponentMarcxmlToAlmaJob', status: Failure('description of this horrible error'))` (example in lib_jobs/app/models/tmas_gate_counts/job.rb)
   - [RL]
 
@@ -194,7 +194,7 @@ Things worth deciding for real before porting this one:
   -- but either would work.
 
   - [RH] adding it to aspace.yml sounds fine to me?
-  - [CC]
+  - [CC] I would keep both to be safe and to be able to test easier.
   - [JS] Maybe have an environment variable with a fallback value in config/aspace.yml?  Using an environment variable keeps things more flexible -- we don't have to deploy a change to aspace.yml if we just want to test something out on staging.
   - [RL]
   
@@ -205,7 +205,7 @@ Things worth deciding for real before porting this one:
   worth confirming against however the Alma side is actually configured.
 
   - [RH] we tell Alma what filename to expect/accept, so that shouldn't be an issue
-  - [CC]
+  - [CC] nice
   - [JS]
   - [RL]
   
@@ -215,7 +215,7 @@ Things worth deciding for real before porting this one:
   REST-call shape easy to review, but the real port should bring it back.
 
   - [RH] okey-dokey
-  - [CC]
+  - [CC] nice
   - [JS]
   - [RL]
 
@@ -234,6 +234,6 @@ regression net once the real port begins.
 
 - [RH] this probably worries me the most--the fact that the fixture Claude used is one it created to fit its code. 
 So before we do anything else, we'd need to run the tests over real fixtures.
-- [CC]
+- [CC] agree
 - [JS] agree with RH
 - [RL]
