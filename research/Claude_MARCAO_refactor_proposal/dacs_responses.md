@@ -10,7 +10,7 @@
 
   - [RH]
   - [CC]
-  - [JS]
+  - [JS]  I think this is a good direction!  It will help us to use the class to encapsulate more of the logic, so that you don't have to consider how all the various methods interact with each other (unless you are deep in troubleshooting mode).
   - [RL]
   
 - **One method per MARC field (or tightly related group of fields),** each
@@ -21,7 +21,7 @@
 
   - [RH] that's an improvement!
   - [CC]
-  - [JS]
+  - [JS]  I agree that this is an improvement!  I would suggest making many of these methods private (to help with encapsulation as mentioned above).  I would not recommend independently testing these methods, but rather testing their behavior by making sure that #to_marc produces good data.  I am also not sure about the naming of these -- is `tags544` the most useful method name (genuine question)?
   - [RL]
   
 - **The six near-identical note-extraction blocks** (`accessrestrict`,
@@ -33,7 +33,7 @@
 
   - [RH] that's an improvement
   - [CC]
-  - [JS]
+  - [JS] nice
   - [RL]
   
 - **The 1xx/6xx/7xx agent-field logic stayed as one method** (`agent_fields`,
@@ -49,7 +49,7 @@
 
   - [RH] correct, that bit is literally a copy, so merging makes every bit of sense
   - [CC]
-  - [JS]
+  - [JS] agree with RH
   - [RL]
 
 2. Things worth deciding/fixing for real, flagged in code comments
@@ -65,7 +65,7 @@
 
   - [RH] oh?? good catch! it shouldn't return `nil`, it should return a blank (i.e. a space).
   - [CC]
-  - [JS]
+  - [JS] agree with RH
   - [RL]
   
 - **Every agent gets a 6xx/7xx "added entry," and creators *additionally* get a
@@ -78,7 +78,7 @@
 
   - [RH] no, that one is intentional
   - [CC]
-  - [JS]
+  - [JS] This terminology (main entry vs added entry) seems like a good thing to educate Claude about (in a repo-specific file or in your global CLAUDE.md?)
   - [RL]
   
 - **`main_term` (datafield 6xx/7xx subfield `$a` for subjects) is not run
@@ -115,7 +115,7 @@ a. **"Which resources are flagged for AO-level export?"** The plugin asks
 
   - [RH] Nice! I had a notion that was there, but finding it would potentially have cost me a lot of time/sweat&tears.
   - [CC]
-  - [JS]
+  - [JS] cool
   - [RL]
    
 b. **"Which AOs under a flagged resource changed since the last run?"** The
@@ -176,14 +176,14 @@ d. maps everything in one pass with `ArchivalObjectRecord.collection_to_marc`
 
   - [RH] I like "defensive rename-before-overwrite dance"! I came up with the dance, and now it has a name! :-)
   - [CC]
-  - [JS]
+  - [JS] 💃
   - [RL]
    
 e. records a one-line report via `LibJob`/`DataSet`, replacing `report.json`.
 
   - [RH]
   - [CC]
-  - [JS]
+  - [JS] It would be nice to also register the job status (Success or Failure) so that it shows up in https://lib-jobs.princeton.edu/status and we get an alert if it fails.  You can do this with `RecentJobStatus.register(job: 'SendComponentMarcxmlToAlmaJob', status: Success())` or `RecentJobStatus.register(job: 'SendComponentMarcxmlToAlmaJob', status: Failure('description of this horrible error'))` (example in lib_jobs/app/models/tmas_gate_counts/job.rb)
   - [RL]
 
 Things worth deciding for real before porting this one:
@@ -195,7 +195,7 @@ Things worth deciding for real before porting this one:
 
   - [RH] adding it to aspace.yml sounds fine to me?
   - [CC]
-  - [JS]
+  - [JS] Maybe have an environment variable with a fallback value in config/aspace.yml?  Using an environment variable keeps things more flexible -- we don't have to deploy a change to aspace.yml if we just want to test something out on staging.
   - [RL]
   
 - **Whether Alma's import side cares about the filename.** `MARC_component_out.xml`
@@ -235,5 +235,5 @@ regression net once the real port begins.
 - [RH] this probably worries me the most--the fact that the fixture Claude used is one it created to fit its code. 
 So before we do anything else, we'd need to run the tests over real fixtures.
 - [CC]
-- [JS]
+- [JS] agree with RH
 - [RL]
