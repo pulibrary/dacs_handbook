@@ -12,6 +12,8 @@ I was initially able to achieve a working demo using Ollama to manage the model,
 
 Using the Hugging Face Text Embeddings Interface, a CLI tool built in Rust, I was able to achieve acceptable results, using the much smaller (600mb) BAAI/bge-reranker-large model. Performance was greatly improved, resulting in approximately 1 second response time.
 
+The UI implementation uses promises to await responses from the search services and the Best Bet database, then queries the AI model when there is not a pre-defined Best Bet. 
+
 ## Results
 
 ## Conclusions and next steps
