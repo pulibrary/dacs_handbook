@@ -11,7 +11,7 @@
   - [RH]
   - [CC]  Good direction and a better fit with Aspace2alma::Resource` / `Aspace2alma::TopContainer conventions. It will be easier to collect logic under this new class. 
   - [JS]  I think this is a good direction!  It will help us to use the class to encapsulate more of the logic, so that you don't have to consider how all the various methods interact with each other (unless you are deep in troubleshooting mode).
-  - [RL]
+  - [RL] This sounds like a good design direction to take. 
   
 - **One method per MARC field (or tightly related group of fields),** each
   memoized the way `Aspace2alma::Resource#tag008` etc. are. The original
@@ -22,7 +22,7 @@
   - [RH] that's an improvement!
   - [CC]  It is definitely an improvement. Agree with JS to move this methods to be private and test the interaction not each method.  
   - [JS]  I agree that this is an improvement!  I would suggest making many of these methods private (to help with encapsulation as mentioned above).  I would not recommend independently testing these methods, but rather testing their behavior by making sure that #to_marc produces good data.  I am also not sure about the naming of these -- is `tags544` the most useful method name (genuine question)?
-  - [RL]
+  - [RL] Big improvement, but I agree with JS that prefixing every method name with `tag` or `tags` doesn't give us much information.
   
 - **The six near-identical note-extraction blocks** (`accessrestrict`,
   `scopecontent`, `relatedmaterial`, `acqinfo`, `bioghist`, `processinfo` --
@@ -34,7 +34,7 @@
   - [RH] that's an improvement
   - [CC] an improvement
   - [JS] nice
-  - [RL]
+  - [RL] DRYing out code is always nice!
   
 - **The 1xx/6xx/7xx agent-field logic stayed as one method** (`agent_fields`,
   feeding `tag1xx_creator` and `tags6xx_agents`). The original computes both
@@ -50,7 +50,7 @@
   - [RH] correct, that bit is literally a copy, so merging makes every bit of sense
   - [CC] per your description RH I agree that it's a better approach
   - [JS] agree with RH
-  - [RL]
+  - [RL] Sounds reasonable
 
 2. Things worth deciding/fixing for real, flagged in code comments
 
@@ -66,7 +66,7 @@
   - [RH] oh?? good catch! it shouldn't return `nil`, it should return a blank (i.e. a space).
   - [CC] :bug: it's good that it found it. We should look into fixing it.
   - [JS] agree with RH
-  - [RL]
+  - [RL] Good catch!
   
 - **Every agent gets a 6xx/7xx "added entry," and creators *additionally* get a
   1xx "main entry"** built from the same name/punctuation/dates -- e.g. a
@@ -116,7 +116,7 @@ a. **"Which resources are flagged for AO-level export?"** The plugin asks
   - [RH] Nice! I had a notion that was there, but finding it would potentially have cost me a lot of time/sweat&tears.
   - [CC] nice
   - [JS] cool
-  - [RL]
+  - [RL] nice
    
 b. **"Which AOs under a flagged resource changed since the last run?"** The
    plugin asks `ArchivalObject.any_repo.filter(root_record_id: id).filter { system_mtime > since }`.
@@ -184,7 +184,7 @@ e. records a one-line report via `LibJob`/`DataSet`, replacing `report.json`.
   - [RH]
   - [CC] JS, Thanks for providing the location in lib-jobs
   - [JS] It would be nice to also register the job status (Success or Failure) so that it shows up in https://lib-jobs.princeton.edu/status and we get an alert if it fails.  You can do this with `RecentJobStatus.register(job: 'SendComponentMarcxmlToAlmaJob', status: Success())` or `RecentJobStatus.register(job: 'SendComponentMarcxmlToAlmaJob', status: Failure('description of this horrible error'))` (example in lib_jobs/app/models/tmas_gate_counts/job.rb)
-  - [RL]
+  - [RL] Yeah, this sounds like a good idea
 
 Things worth deciding for real before porting this one:
 - **Where `marcao_flag_field` lives.** The draft reads it from
@@ -196,7 +196,7 @@ Things worth deciding for real before porting this one:
   - [RH] adding it to aspace.yml sounds fine to me?
   - [CC] I would keep both to be safe and to be able to test easier.
   - [JS] Maybe have an environment variable with a fallback value in config/aspace.yml?  Using an environment variable keeps things more flexible -- we don't have to deploy a change to aspace.yml if we just want to test something out on staging.
-  - [RL]
+  - [RL] Both sounds good
   
 - **Whether Alma's import side cares about the filename.** `MARC_component_out.xml`
   is a guess at a name that (a) won't collide with `SendMarcxmlToAlmaJob`'s
@@ -236,4 +236,4 @@ regression net once the real port begins.
 So before we do anything else, we'd need to run the tests over real fixtures.
 - [CC] agree
 - [JS] agree with RH
-- [RL]
+- [RL] agree
