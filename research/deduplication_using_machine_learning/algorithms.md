@@ -14,3 +14,6 @@ Two interesting examples:
 Also of interest is the question of which algorithms you use to determine
 the similarity of a given pair of data records.
 
+## Further reading
+
+* [Classification algorithms](https://recordlinkage.readthedocs.io/en/latest/guides/classifiers.html) from the Python Record Linkage Toolkit
