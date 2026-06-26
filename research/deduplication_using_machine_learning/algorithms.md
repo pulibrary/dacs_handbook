@@ -17,3 +17,4 @@ the similarity of a given pair of data records.
 ## Further reading
 
 * [Classification algorithms](https://recordlinkage.readthedocs.io/en/latest/guides/classifiers.html) from the Python Record Linkage Toolkit
+* [A nice tutorial on Fellegi Sunter](https://www.robinlinacre.com/probabilistic_linkage/)
