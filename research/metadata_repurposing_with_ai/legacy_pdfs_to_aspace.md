@@ -22,7 +22,7 @@ Once the data is in ArchivesSpace, it becomes part of our regular processes that
 Claude performed impressively, but the limitations of the free version required the purchase of a Pro license and additional tokens. 
 Copilot proved unsuitable.
 
-### The Play-by-Play
+### From PDF to EAD: The Play-by-Play
 
 **1. Claude (Sonnet 4.6, free version): single-file processing**
 
@@ -131,3 +131,49 @@ FolderNumber,Title,Page
 
 **Takeaway:**
 Designed to maximize user engagement rather than produce usable output. Borderline abusive. Huge waste of time.
+
+### From EAD to ArchivesSpace: Claude Code (Opus 4.8) via IDE
+
+Getting the Claude-produced EAD files into ArchivesSpace is not entirely straightforward because the EAD importer reads multiple `<container>` elements in a component as if they were nested in one another (to a depth of three: it will understand the first as a box or "top_container," the second as a file or folder in the box, and the third as an item in the folder). It will also silently drop any container elements beyond three. 
+
+This means top_container records need to be imported separately. They then need to be linked to their corresponding container profile (aka box size), holding location, and descriptive component or "archives_object".
+
+#### 1. Setup
+
+I have a pipeline of Ruby scripts for this already that I decided to let Claude run for me. I installed the Claude extension in my VS Code and selected a more sophisticated model, Opus 4.8, for the task. NB running Claude Code means giving the model access to the file system (unless it's run from a container, which I did not do for this experiment).
+
+#### 2. Mapping Alma Item Records to EAD `archival_objects`
+
+I next downloaded the item records for the finding aids from Alma and instructed Claude to 
+- map the EADs' `<container>` elements to the item records
+- update the extent statements
+- include an altformavail note with the microfilm numbers, reel count, and a link to the catalog record
+- run my existing validation scripts
+
+Claude impressed me by correctly flagging several issues, including
+- a gap in the box numbers
+- a missing barcode
+- the fact that one collection may be associated with multiple microfilm identifiers
+- box number ranges in the EAD that needed expanding to properly match them to item recorde (once instructed to expand the ranges, it correctly expanded a range 13-15B based on the matching box numbers from the Alma item records).
+It then ran the validation scripts and conducted its own verification of extent statements unprompted, during which it updated two of the extent statements.
+
+Aside: During the box range expansion, Claude reported and "API Error: Overloaded" from which it did not independently recover. Once prompted, it was able to resume where it left off. 
+
+#### 2. Preparing the Item Records for Import
+
+Then I asked Claude to prepare a new CSV for me for the containers, containing the columns eadid, barcode, location, type, indicator, and ao_uri, in preparation for running two pre-existing scripts to import and link the top_container records. As part of this step, it analyzed and validated my scripts and suggested the addition of additional rescue methods. It also independently tested the availability of the script's environmental variables and made a test call to the ArchivesSpace API.
+
+#### 4. Importing the Item Records
+
+Claude then ran the importing and linking scripts on aspace-staging without further input from me. During import, it encountered one failed row in each container list and correctly identified those as barcodes already present in ArchivesSpace from previous test runs of mine. Without prompting, it excluded them from the import but included them in the linking step. It also updated the script to account for this scenario in the future and validated container and link counts.
+
+#### 5. Re-writing the Initial Prompt
+
+As a final step, I asked Claude to capture in my original prompt (an .md file) the tools and workflow so the whole process can be re-run on prod.
+
+#### Takeaways
+
+I was able to finish the task within the 5-hour session and used 25% of that session's token allotment. Allowing Claude access to my file system made me nervous, which may explain why I found the experience intense. (I was also not allowing it to work autonomously, which means I had to interact with it all the time to give permissions or feedback.) 
+
+One surprise to me was that it did not confine itself to working within the local repository I had specified in my prompt (and had open in VS Code) but went happily rooting around on my computer for "other examples" of what I was asking it to do. I don't know whether I could have prompted it not to, but based on this experience I think we'd definitely want to run it from a container to protect both the privacy of the staff and the possible confidentiality of Library assets. (This may be a technical hurdle for many staff.)
+
