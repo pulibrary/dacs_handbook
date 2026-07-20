@@ -138,6 +138,8 @@ Getting the Claude-produced EAD files into ArchivesSpace is not entirely straigh
 
 This means top_container records need to be imported separately. They then need to be linked to their corresponding container profile (aka box size), holding location, and descriptive component or "archives_object".
 
+Crucially, this is not a limitation Claude flagged, even though it knew the data was to be imported to ArchivesSpace. It needed the knowledge of a human operator to avoid data loss.
+
 #### 1. Setup
 
 I have a pipeline of Ruby scripts for this already that I decided to let Claude run for me. I installed the Claude extension in my VS Code and selected a more sophisticated model, Opus 4.8, for the task. NB running Claude Code means giving the model access to the file system (unless it's run from a container, which I did not do for this experiment).
