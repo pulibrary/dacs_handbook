@@ -136,7 +136,7 @@ Designed to maximize user engagement rather than produce usable output. Borderli
 
 Getting the Claude-produced EAD files into ArchivesSpace is not entirely straightforward because the EAD importer reads multiple `<container>` elements in a component as if they were nested in one another (to a depth of three: it will understand the first as a box or "top_container," the second as a file or folder in the box, and the third as an item in the folder). It will also silently drop any container elements beyond three. 
 
-This means top_container records need to be imported separately. They then need to be linked to their corresponding container profile (aka box size), holding location, and descriptive component or "archives_object".
+This means top_container records need to be imported separately. They then need to be linked to their corresponding container profile (aka box size), holding location, and descriptive component or "archival_object".
 
 Crucially, this is not a limitation Claude flagged, even though it knew the data was to be imported to ArchivesSpace. It needed the knowledge of a human operator to avoid data loss.
 
