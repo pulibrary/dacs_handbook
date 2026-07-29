@@ -169,9 +169,9 @@ Then I asked Claude to prepare a new CSV for me for the containers, containing t
 
 Claude then ran the importing and linking scripts on aspace-staging without further input from me. During import, it encountered one failed row in each container list and correctly identified those as barcodes already present in ArchivesSpace from previous test runs of mine. Without prompting, it excluded them from the import but included them in the linking step. It also updated the script to account for this scenario in the future and validated container and link counts.
 
-#### 5. Re-writing the Initial Prompt
+#### 5. Making the Project Repeatable
 
-As a final step, I asked Claude to capture in my original prompt (an .md file) the tools and workflow so the whole process can be re-run on prod.
+As a final step, I asked Claude to capture the tools and workflow so the whole process can be re-run on prod. It created two versions, a human-readable narrative plan as well as a project file for its own consumption containing the tools run, anomalies found, and current state. I found that I could come back to the conversation and pick up where I left off without missing a beat.
 
 #### Takeaways
 
